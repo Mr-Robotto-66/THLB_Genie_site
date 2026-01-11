@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THLB Genie - Timber Harvesting Land Base Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">THLB Genie</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#workflow">How It Works</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="tree-silhouette"></div>
+        <div class="hero-content">
+            <img src="images/THLB_genie.png" alt="THLB Genie" class="hero-logo">
+            <p class="hero-subtitle">Automated Timber Harvesting Land Base Analysis for ArcGIS Pro</p>
+            <p class="hero-description">
+                Transform complex constraint analysis into actionable forest management insights. 
+                Process multiple layers, apply buffers, and generate comprehensive THLB/CFLB classifications—all from a single tool.
+            </p>
+            <div class="hero-buttons">
+                <a href="../README.md" class="btn btn-primary">View Documentation</a>
+                <a href="#features" class="btn btn-secondary">Explore Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Understanding THLB & CFLB</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>THLB</h3>
+                    <p class="about-subtitle">Timber Harvesting Land Base</p>
+                    <p>The portion of forest land where timber harvesting is both acceptable and economically feasible. Areas are excluded based on constraints like parks, wildlife habitat, steep slopes, and riparian zones.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3>CFLB</h3>
+                    <p class="about-subtitle">Crown Forest Land Base</p>
+                    <p>Crown-owned forested land that may have fewer restrictions than THLB. Some areas qualify as CFLB but not THLB due to additional harvesting constraints applied to the timber base.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="3" y1="9" x2="21" y2="9"/>
+                            <line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Excel-Driven Configuration</h3>
+                    <p>Define all constraints in a simple Excel spreadsheet. Specify feature classes, data sources, definition queries, and buffer distances—no coding required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Layer Processing</h3>
+                    <p>Process unlimited constraint layers from BCGW, internal databases, or local files. Each layer is clipped, buffered, and classified automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Intelligent Tiling</h3>
+                    <p>Large areas are automatically split using a provincial fishnet grid, enabling efficient parallel processing of extensive timber supply areas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3>Comprehensive Output</h3>
+                    <p>Generate detailed results with Y/N classification for each constraint, plus summary THLB_Total and CFLB_Total fields for quick filtering.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3>Sliver Cleanup</h3>
+                    <p>Automatically eliminates slivers and small polygons using configurable thresholds, ensuring clean topology in your final output.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>What-If Analysis</h3>
+                    <p>Use the Field Calculator tool to create custom summary fields that exclude specific constraints—perfect for scenario planning and sensitivity analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Configure Constraints</h3>
+                        <p>Define your constraint layers in the Excel template. Specify the feature class, data source, definition query, and optional buffer distance for each layer.</p>
+                    </div>
+                </div>
+                <div class="workflow-connector"></div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Define Your AOI</h3>
+                        <p>Select your Area of Interest polygon—a TSA boundary, landscape unit, or custom study area. Apply SQL filters to process specific subsets.</p>
+                    </div>
+                </div>
+                <div class="workflow-connector"></div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Run the Analysis</h3>
+                        <p>THLB Genie clips, buffers, dissolves, and unions all constraint layers. Each polygon is classified as available (Y) or excluded (N) for every constraint.</p>
+                    </div>
+                </div>
+                <div class="workflow-connector"></div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Review Results</h3>
+                        <p>Explore the detailed THLB_Final output or use the simplified Lite versions for quick harvestable/non-harvestable visualization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Screenshots showcasing the tool interface and outputs</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('images/excel_template.png', 'Constraints configuration spreadsheet')">
+                    <div class="gallery-image-wrapper">
+                        <img src="images/excel_template.png" alt="Excel Template">
+                    </div>
+                    <p class="gallery-caption">Constraints configuration spreadsheet</p>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/tool_interface.png', 'ArcGIS Pro toolbox parameters')">
+                    <div class="gallery-image-wrapper">
+                        <img src="images/tool_interface.png" alt="Tool Interface">
+                    </div>
+                    <p class="gallery-caption">ArcGIS Pro toolbox parameters</p>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/THLB_final_output.png', 'THLB detailed constraint classification map')">
+                    <div class="gallery-image-wrapper">
+                        <img src="images/THLB_final_output.png" alt="THLB Final Output">
+                    </div>
+                    <p class="gallery-caption">THLB detailed constraint classification map</p>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('images/CFLB_final_output.png', 'CFLB constraint classification map')">
+                    <div class="gallery-image-wrapper">
+                        <img src="images/CFLB_final_output.png" alt="CFLB Final Output">
+                    </div>
+                    <p class="gallery-caption">CFLB constraint classification map</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+            <img id="lightbox-img" src="" alt="">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="get-started">
+        <div class="container">
+            <h2 class="section-title">Get Started</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>ArcGIS Pro 2.9 or later</li>
+                        <li>Python 3.x (included with ArcGIS Pro)</li>
+                        <li>BCGW database connection</li>
+                        <li>pandas & openpyxl packages</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <h3>Included Tools</h3>
+                    <ul>
+                        <li><strong>THLB Genie</strong> — Main constraint processing tool</li>
+                        <li><strong>THLB New Field Calculator</strong> — Custom summary field creator</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cta-section">
+                <p>For detailed installation instructions, parameter documentation, and example use cases, see the full README.</p>
+                <a href="../README.md" class="btn btn-primary btn-large">View Full Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>THLB Genie — BC Timber Sales</p>
+            <p class="footer-note">Internal use only</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Lightbox functions
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const captionEl = document.getElementById('lightbox-caption');
+            
+            img.src = src;
+            captionEl.textContent = caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
